@@ -19,4 +19,5 @@ class shorewall::config inherits shorewall {
     group   => 0,
     mode    => '0644',
     content => $config_ipv4_interfaces,
+  }
 }

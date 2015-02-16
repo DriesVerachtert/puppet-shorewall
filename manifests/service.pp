@@ -1,8 +1,8 @@
 class shorewall::service inherits shorewall {
-  if ! (($service_ipv4_ensure in [ 'running', 'stopped' ]) {
+  if ! ($service_ipv4_ensure in [ 'running', 'stopped' ]) {
     fail('service_ipv4_ensure parameter must be running or stopped')
   }
-  if ! (($service_ipv6_ensure in [ 'running', 'stopped' ]) {
+  if ! ($service_ipv6_ensure in [ 'running', 'stopped' ]) {
     fail('service_ipv6_ensure parameter must be running or stopped')
   }
 

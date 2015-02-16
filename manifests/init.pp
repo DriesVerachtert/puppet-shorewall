@@ -13,25 +13,25 @@ class shorewall (
   $service_ipv4_ensure = $shorewall::params::service_ipv4_ensure,
   $service_ipv6_ensure = $shorewall::params::service_ipv6_ensure,
   $service_ipv4_enable = $shorewall::params::service_ipv4_enable,
-  $service_ipv6_enable = $shorewall::params::service_ipv6_enable,
+  $service_ipv6_enable = $shorewall::params::service_ipv6_enable
 
 
 ) inherits shorewall::params {
-  validate_bool($package_ipv4_manage),
-  validate_bool($package_ipv6_manage),
-  validate_string($package_ipv4_ensure),
-  validate_string($package_ipv6_ensure),
+  validate_bool($package_ipv4_manage)
+  validate_bool($package_ipv6_manage)
+  validate_string($package_ipv4_ensure)
+  validate_string($package_ipv6_ensure)
 
-  validate_string($config_ipv4_zones),
-  validate_string($config_ipv4_masq),
-  validate_string($config_ipv4_interfaces),
+  validate_string($config_ipv4_zones)
+  validate_string($config_ipv4_masq)
+  validate_string($config_ipv4_interfaces)
 
-  validate_bool($service_ipv4_manage),
-  validate_bool($service_ipv6_manage),
-  validate_string($service_ipv4_ensure),
-  validate_string($service_ipv6_ensure),
-  validate_string($service_ipv4_enable),
-  validate_string($service_ipv6_enable),
+  validate_bool($service_ipv4_manage)
+  validate_bool($service_ipv6_manage)
+  validate_string($service_ipv4_ensure)
+  validate_string($service_ipv6_ensure)
+  validate_string($service_ipv4_enable)
+  validate_string($service_ipv6_enable)
   
   anchor { 'shorewall::begin': } ->
   class { '::shorewall::install': } ->
