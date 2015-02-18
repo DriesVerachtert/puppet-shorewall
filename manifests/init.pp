@@ -5,8 +5,10 @@ class shorewall (
   $package_ipv6_ensure = $shorewall::params::package_ipv6_ensure,
 
   $config_ipv4_zones = $shorewall::params::config_ipv4_zones,
+  $config_ipv6_zones = $shorewall::params::config_ipv6_zones,
   $config_ipv4_masq = $shorewall::params::config_ipv4_masq,
   $config_ipv4_interfaces = $shorewall::params::config_ipv4_interfaces,
+  $config_ipv4_policy = $shorewall::params::config_ipv4_policy,
 
   $service_ipv4_manage = $shorewall::params::service_ipv4_manage,
   $service_ipv6_manage = $shorewall::params::service_ipv6_manage,
@@ -23,8 +25,10 @@ class shorewall (
   validate_string($package_ipv6_ensure)
 
   validate_string($config_ipv4_zones)
+  validate_string($config_ipv6_zones)
   validate_string($config_ipv4_masq)
   validate_string($config_ipv4_interfaces)
+  validate_string($config_ipv4_policy)
 
   validate_bool($service_ipv4_manage)
   validate_bool($service_ipv6_manage)
