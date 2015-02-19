@@ -9,6 +9,7 @@ class shorewall::params {
   $config_ipv6_zones = ''
   $config_ipv4_masq = ''
   $config_ipv4_interfaces = ''
+  $config_ipv6_interfaces = ''
   $config_ipv4_policy = ''
 
   $service_ipv4_manage = true
@@ -24,6 +25,7 @@ class shorewall::params {
   $default_config_ipv6_zones_file = '/etc/shorewall6/zones'
   $default_config_ipv4_masq_file = '/etc/shorewall/masq'
   $default_config_ipv4_interfaces_file = '/etc/shorewall/interfaces'
+  $default_config_ipv6_interfaces_fiel = '/etc/shorewall6/interfaces'
   $default_config_ipv4_policy_file = '/etc/shorewall/policy'
 
   $default_service_ipv4_name = 'shorewall'
@@ -37,6 +39,7 @@ class shorewall::params {
       $config_ipv6_zones_file = $default_config_ipv6_zones_file
       $config_ipv4_masq_file = $default_config_ipv4_masq_file
       $config_ipv4_interfaces_file = $default_config_ipv4_interfaces_file
+      $config_ipv6_interfaces_file = $default_config_ipv6_interfaces_file
       $config_ipv4_policy_file = $default_config_ipv4_policy_file
       $service_ipv4_name = $default_service_ipv4_name
       $service_ipv6_name = $default_service_ipv6_name
