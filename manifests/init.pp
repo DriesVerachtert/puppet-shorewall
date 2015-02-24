@@ -10,6 +10,7 @@ class shorewall (
   $config_ipv4_interfaces = $shorewall::params::config_ipv4_interfaces,
   $config_ipv6_interfaces = $shorewall::params::config_ipv6_interfaces,
   $config_ipv4_policy = $shorewall::params::config_ipv4_policy,
+  $config_ipv6_policy = $shorewall::params::config_ipv6_policy,
 
   $service_ipv4_manage = $shorewall::params::service_ipv4_manage,
   $service_ipv6_manage = $shorewall::params::service_ipv6_manage,
@@ -31,6 +32,7 @@ class shorewall (
   validate_string($config_ipv4_interfaces)
   validate_string($config_ipv6_interfaces)
   validate_string($config_ipv4_policy)
+  validate_string($config_ipv6_policy)
 
   validate_bool($service_ipv4_manage)
   validate_bool($service_ipv6_manage)

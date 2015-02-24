@@ -41,4 +41,11 @@ class shorewall::config inherits shorewall {
     mode    => '0600',
     content => $config_ipv4_policy,
   }
+  file { $config_ipv6_policy_file:
+    ensure  => file,
+    owner   => 0,
+    group   => 0,
+    mode    => '0600',
+    content => $config_ipv6_policy,
+  }
 }
