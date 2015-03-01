@@ -28,7 +28,7 @@ class shorewall::params {
   $default_config_ipv4_interfaces_file = '/etc/shorewall/interfaces'
   $default_config_ipv6_interfaces_file = '/etc/shorewall6/interfaces'
   $default_config_ipv4_policy_file = '/etc/shorewall/policy'
-  $default_config_ipv4_policy_file = '/etc/shorewall6/policy'
+  $default_config_ipv6_policy_file = '/etc/shorewall6/policy'
 
   $default_service_ipv4_name = 'shorewall'
   $default_service_ipv6_name = 'shorewall6'
